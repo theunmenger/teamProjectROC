@@ -12,7 +12,7 @@ body {
 }
 
 #main_container {
-    background-color: rgb(217, 250, 217);
+    background-color: rgb(255, 255, 255);
     height: 100hv;
     flex:1;
     width: 80%;
