@@ -1,0 +1,102 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img-voorraad/BG-vp.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative; /* Allow absolute positioning within the body */
+}
+
+header {
+    background-color: rgba(91, 218, 128, 0.9);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.auth-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.auth-buttons button:hover {
+    background-color: #45a049;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 70vh;
+}
+
+.container {
+    background-color: rgb(173, 253, 180);
+    width: 70%;  /* Adjust width as needed */
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    text-align: center;
+    position: relative; /* For absolute positioning of the image */
+    min-height: 600px;  /* Adjust this value to make the container taller */
+}
+
+.intro-text h2 {
+    font-size: 40px; /* Increase font size */
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.4;  /* Adjust line height for spacing between lines */
+}
+
+/* Position the image at the bottom-left */
+.intro-image {
+    position: absolute;
+    bottom: 50px; /* Distance from the bottom */
+    left: 50px; /* Distance from the left */
+    width: 200px; /* Control the size of the image */
+}
+
+/* Class for MR-vp.png */
+.mr-image {
+    position: absolute;
+    top: 140px;  /* Position at the top of the container */
+    right :160px ;
+    width: 250px; /* Adjust image size */
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
