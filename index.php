@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Time2Study – Landing</title>
+  <style>
+    :root{
+      --bg1:#ccf2cf; --bg2:#aee9b9; --ink:#145f28;
+      --card:#ffffffde; --shadow:0 10px 30px rgba(0,0,0,.12);
+      --radius:22px; --brand:#5fe08f; --brand-dark:#106d2a;
+      --btn:#c2f0cd; --title:#15762a;
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{
+      margin:0; color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 700px at 70% 45%, var(--bg1) 0%, var(--bg2) 60%, #a4e3b5 100%);
+      overflow-x:hidden;
+    }
+    .bg-doodles{position:fixed; inset:0; pointer-events:none; opacity:.18;
+      background-image:
+        radial-gradient(circle at 12% 18%, transparent 22px, rgba(255,255,255,.7) 23px, transparent 24px),
+        radial-gradient(circle at 35% 8%,  transparent 18px, rgba(255,255,255,.7) 19px, transparent 20px),
+        radial-gradient(circle at 80% 16%, transparent 24px, rgba(255,255,255,.7) 25px, transparent 26px),
+        radial-gradient(circle at 60% 35%, transparent 20px, rgba(255,255,255,.7) 21px, transparent 22px),
+        radial-gradient(circle at 25% 60%, transparent 20px, rgba(255,255,255,.7) 21px, transparent 22px),
+        radial-gradient(circle at 90% 72%, transparent 20px, rgba(255,255,255,.7) 21px, transparent 22px);
+      background-size:160px 160px;
+    }
+    .container{max-width:1160px; margin-inline:auto; padding:clamp(20px,3vw,40px); position:relative;}
+    .top-actions{position:absolute; right:clamp(16px,4vw,40px); top:clamp(16px,2vw,28px); display:flex; gap:14px;}
+    .btn{background:var(--btn); color:var(--ink); border:0; padding:12px 22px; font-weight:700; border-radius:14px; box-shadow:0 12px 0 rgba(0,0,0,.05) inset, 0 8px 18px rgba(0,0,0,.12); cursor:pointer;}
+    .btn:hover{filter:saturate(110%); transform:translateY(-1px)}
+    .brand{display:inline-flex; gap:10px; background:#7ee4a4; padding:14px 18px; border-radius:18px; margin-top:clamp(10px,1.5vw,20px); box-shadow:var(--shadow);}
+    .brand span{font-weight:800; color:var(--brand-dark); font-size:clamp(20px,2.3vw,32px);}
+    .brand b{background:var(--brand); border-radius:14px; padding:12px 16px;}
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(24px,5vw,64px); align-items:center; margin-top:clamp(18px,3vw,28px);}
+    .title{font-size:clamp(30px,4.4vw,58px); line-height:1.12; font-weight:900; color:var(--title); text-wrap:balance;}
+    .card{margin-top:clamp(22px,3vw,34px); background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      display:grid; grid-template-columns:repeat(3,1fr); gap:8px; padding:22px 26px; width:min(680px,100%);}
+    .feat{display:grid; justify-items:center; text-align:center; gap:12px; padding:10px 8px;}
+    .feat svg{width:54px; height:54px;}
+    .feat h4{margin:0; font-size:15px; color:#166b2a}
+    .feat p{margin:0; font-size:14px; color:#206a2d}
+    .illus-wrap{display:grid; place-items:center;}
+    .badge{
+      width:min(460px,95%); aspect-ratio:1/1; border-radius:50%;
+      background:radial-gradient(80% 80% at 30% 20%, #f2fff7 0%, #e4fff0 45%, #ccf6de 100%);
+      box-shadow:var(--shadow); overflow:hidden; position:relative; display:grid; place-items:center;
+      padding:24px;
+    }
+    .badge img{
+      width:100%; height:100%; object-fit:contain;
+      filter: saturate(105%);
+    }
+    @media (max-width:940px){.hero{grid-template-columns:1fr}.illus-wrap{order:-1}.top-actions{position:static; justify-content:flex-end; margin-top:12px}}
+    @media (max-width:620px){.card{grid-template-columns:1fr; gap:16px}}
+  </style>
+</head>
+<body>
+  <div class="bg-doodles" aria-hidden="true"></div>
+
+  <main class="container">
+    <div class="top-actions">
+      <a href="auth.php" class="btn">sign in</a>
+      <a href="login.php" class="btn">login</a>
+    </div>
+
+    <div class="brand" aria-label="Time2Study">
+      <span>Time2Study</span><b></b>
+    </div>
+
+    <section class="hero" aria-labelledby="h1">
+      <div>
+        <h1 id="h1" class="title">Plan je studie, hou je voortgang bij en deel dit met je docent.</h1>
+
+        <div class="card" role="list">
+          <article class="feat" role="listitem" aria-label="Plan je opdrachten per week">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="3" stroke="#1c8a43" stroke-width="2"/>
+              <path d="M7 3v4M17 3v4M3 10h18" stroke="#1c8a43" stroke-width="2" stroke-linecap="round"/>
+              <rect x="7" y="12" width="3" height="3" rx="1" fill="#76d694"/>
+              <rect x="12" y="12" width="3" height="3" rx="1" fill="#76d694"/>
+              <rect x="17" y="12" width="3" height="3" rx="1" fill="#76d694"/>
+            </svg>
+            <h4>Plan je</h4><p>opdrachten per week</p>
+          </article>
+
+          <article class="feat" role="listitem" aria-label="Geef aan of je ze hebt gehaald">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="6" fill="#3dbb6d"/>
+              <path d="M7 12.5l3.5 3.5L17 9" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h4>Geef aan of</h4><p>je ze hebt gehaald</p>
+          </article>
+
+          <article class="feat" role="listitem" aria-label="Docenten volgen je voortgang">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="8" r="4" fill="#3dbb6d"/>
+              <rect x="4" y="14" width="16" height="7" rx="3.5" fill="#3dbb6d"/>
+              <circle cx="12" cy="8" r="2" fill="#e7ffe9"/>
+            </svg>
+            <h4>Docenten</h4><p>volgen je voortgang</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="illus-wrap" aria-hidden="true">
+        <div class="badge">
+          <!-- Replace the src with your PNG path if different -->
+          <img src="img-voorraad/woman.png" alt="Vrouw studeert met laptop, kalender en plant op bureau">
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -8,9 +8,9 @@
 </head>
 <body>
     <div id="header">
-        <a href="home.html"><h3>Home</h3></a>
-        <a href="rooster.html"><h3>Rooster</h3></a>
-        <a href="account.html" class="current_page"><h3>Account</h3></a>
+        <a href="home.php"><h3>Home</h3></a>
+        <a href="rooster.php"><h3>Rooster</h3></a>
+        <a href="account.php" class="current_page"><h3>Account</h3></a>
     </div>
     <div id="main_container">
         <h3>personal information</h3>
