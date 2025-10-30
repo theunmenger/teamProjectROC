@@ -50,3 +50,4 @@ function current_user() {
     start_session();
     return isset($_SESSION['user']) ? $_SESSION['user'] : null;
 }
+?>

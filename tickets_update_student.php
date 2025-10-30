@@ -24,3 +24,4 @@ if ($id === '' || $status === '') {
 $conn = db();
 $sql = ""; // sql
 echo "Ticket aangepast";
+?>

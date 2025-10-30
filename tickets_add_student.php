@@ -27,3 +27,4 @@ if ($title === '' || $vak === '' || $opdracht === '') {
 $conn = db();
 $sql = ""; // sql
 echo "Ticket toegevoegd";
+?>

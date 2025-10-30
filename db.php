@@ -15,3 +15,4 @@ function db() {
     }
     return $conn;
 }
+?>

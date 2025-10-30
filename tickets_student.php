@@ -11,3 +11,4 @@ if (!$user || $user['role'] !== 'student') {
 $conn = db();
 $sql = ""; // sql
 echo "Tickets ophalen";
+?>
